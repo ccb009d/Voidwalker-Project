@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpysf83jvtho4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rvu7i"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_myinc"]
+radius = 0.108456
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.91917, 0.0387367, 0, -0.113164, 0.999249, 0, 0, 0)
+mesh = SubResource("BoxMesh_rvu7i")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("BoxMesh_rvu7i")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("BoxMesh_rvu7i")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2692, 0.60349, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228819, 0.353113, 0.167302)
+shape = SubResource("SphereShape3D_myinc")
